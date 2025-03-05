@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, render_template
 import hashlib
+import os
 
 app = Flask(__name__)
 
@@ -48,4 +49,5 @@ def link_sayfasi(link_id):
     return "Bu sayfa bulunamadı.", 404
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render 10000 portunu kullanıyor
+    app.run(host="0.0.0.0", port=port)
