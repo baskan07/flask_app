@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, render_template
 import hashlib
 
-app = Flask(__name__,template_folder=r'C:/Users/Arda/Desktop/templates')
+app = Flask(__name__)
 
 # Linkleri saklamak için basit bir sözlük
 saved_links = {}
