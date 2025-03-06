@@ -7,6 +7,10 @@ app = Flask(__name__)
 # Linkleri saklamak için basit bir sözlük
 saved_links = {}
 
+@app.route('/')
+def home():
+    return redirect("/olustur", code=301)  # 302 geçici yönlendirme (veya 301 kalıcı yönlendirme)
+
 @app.route("/olustur", methods=["GET"])
 def olustur():
     return render_template("olustur.html")
