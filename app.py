@@ -19,7 +19,7 @@ def kaydet():
     link_id = hashlib.md5(user_link.encode()).hexdigest()[:6]
     saved_links[link_id] = user_link
 
-    return f"Oluşturulan sayfa: <a href='/link/{link_id}'>www.butonatikla.com/link/{link_id}</a>"
+    return f"Oluşturulan sayfa: <a href='/link/{link_id}'>www.butonatikla.onrender.com/link/{link_id}</a>"
 
 @app.route("/link/<link_id>")
 def link_sayfasi(link_id):
